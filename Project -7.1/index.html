@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LeetCode Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 LeetCode Metrics Dashboard</h1>
+    <div class="search-bar">
+      <input type="text" id="username" placeholder="Enter LeetCode username" />
+      <button onclick="getLeetCodeData()">Analyze</button>
+    </div>
+
+    <div class="card glass" id="results"></div>
+
+    <div class="charts">
+      <div class="chart-container glass">
+        <h3>Difficulty-wise Distribution</h3>
+        <canvas id="difficultyChart"></canvas>
+        <button onclick="downloadChart()">Download Chart</button>
+      </div>
+
+      <div class="chart-container glass">
+        <h3>Progress Over Time</h3>
+        <div id="progressChartContainer"></div>
+      </div>
+    </div>
+
+    <!-- <div class="glass leaderboard">
+      <h2>🏆 Leaderboard Comparison</h2>
+      <table id="leaderboard">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Total Solved</th>
+            <th>Ranking</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboard-body"></tbody>
+      </table>
+    </div>
+  </div> -->
+
+  <script src="script.js"></script>
+</body>
+</html>
